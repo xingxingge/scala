@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hx</groupId>
+    <version>1.0</version>
+    <artifactId>scala-test</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <libOutputDirectory>${project.build.directory}/lib</libOutputDirectory>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <!--<plugin>-->
+                <!--<artifactId>maven-assembly-plugin</artifactId>-->
+                <!--<version>2.6</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>assembly</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<finalName>zbh-release</finalName>-->
+                            <!--<appendAssemblyId>false</appendAssemblyId>-->
+                            <!--<descriptor>src/main/assembly/assembly.xml</descriptor>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-shade-plugin</artifactId>-->
+                <!--<version>3.0.0</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>shade</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<outputFile>${project.build.directory}/zbh-assembly.jar</outputFile>-->
+                            <!--&lt;!&ndash;<artifactSet>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<excludes>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<exclude>junit:junit</exclude>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<exclude>org.hamcrest:hamcrest-core</exclude>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</excludes>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</artifactSet>&ndash;&gt;-->
+                            <!--<filters>-->
+                                <!--<filter>-->
+                                    <!--<artifact>*:*</artifact>-->
+                                    <!--<excludes>-->
+                                        <!--<exclude>META-INF/*.SF</exclude>-->
+                                        <!--<exclude>META-INF/*.DSA</exclude>-->
+                                        <!--<exclude>META-INF/*.RSA</exclude>-->
+                                        <!--<exclude>*.properties</exclude>-->
+                                    <!--</excludes>-->
+                                <!--</filter>-->
+                            <!--</filters>-->
+                            <!--<transformers>-->
+                                <!--<transformer-->
+                                        <!--implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+                                    <!--<mainClass>com.topsec.zbh.MainRunner</mainClass>-->
+                                <!--</transformer>-->
+                            <!--</transformers>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+    <profiles>
+        <!--<profile>-->
+            <!--<id>pro</id>-->
+            <!--<dependencies>-->
+                <!--<dependency>-->
+                    <!--<groupId>mysql</groupId>-->
+                    <!--<artifactId>mysql-connector-java</artifactId>-->
+                    <!--<scope>provided</scope>-->
+                    <!--<version>5.1.38</version>-->
+                <!--</dependency>-->
+            <!--</dependencies>-->
+        <!--</profile>-->
+    </profiles>
+
+
+</project>
